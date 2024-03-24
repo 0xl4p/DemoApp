@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddressActivity">
+
+
+    <TextView
+        android:id="@+id/text_order"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#47258F"
+        android:gravity="center"
+        android:text="Thanh toán"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/ic_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        android:text="Lưu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625"
+        app:srcCompat="@drawable/ic_back" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="412dp"
+        android:layout_height="137dp"
+        android:background="#B9A7E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_order" />
+
+    <TextView
+        android:id="@+id/card"
+        android:layout_width="256dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/rounded_rectangle"
+        android:padding="16dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_order" />
+
+    <ImageView
+        android:id="@+id/ic_tick"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toTopOf="@+id/card"
+        app:srcCompat="@drawable/tick" />
+
+    <TextView
+        android:id="@+id/saved_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:text="Nguyễn Quốc Đạt"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toTopOf="@+id/card" />
+
+    <ImageView
+        android:id="@+id/ic_edit"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintTop_toTopOf="@+id/card"
+        app:srcCompat="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Thư Phú, Thường Tín, Hà Nội"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toTopOf="@+id/card" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="95dp"
+        android:text="0965512901"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toTopOf="@+id/card" />
+
+    <TextView
+        android:id="@+id/step1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_solid"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/step2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_empty"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/step3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_empty"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/dahsed1"
+        android:layout_width="83dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toStartOf="@+id/step2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/step1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dashed" />
+
+    <ImageView
+        android:id="@+id/dahsed2"
+        android:layout_width="83dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toStartOf="@+id/step3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/step2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dashed" />
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Địa chỉ"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_orderdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Chi tiết hóa đơn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Thanh toán"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_name"
+        android:layout_width="342dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ và tên" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_address"
+        android:layout_width="346dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Địa chỉ" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_phone"
+        android:layout_width="173dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số điện thoại" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_email"
+        android:layout_width="161dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            tools:layout_editor_absoluteX="204dp"
+            tools:layout_editor_absoluteY="471dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
