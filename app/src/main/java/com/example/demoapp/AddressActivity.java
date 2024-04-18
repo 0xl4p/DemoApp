@@ -9,9 +9,13 @@ import android.widget.Button;
 
 import android.widget.ImageView;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 
 public class AddressActivity extends AppCompatActivity {
     private ImageView step1,step2,step3;
+    Button ic_save;
+    TextInputEditText input_name, input_address, input_phone, input_email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,14 +50,36 @@ public class AddressActivity extends AppCompatActivity {
 
 
         // intent
-        Button button = findViewById(R.id.ic_save);
-        button.setOnClickListener(new View.OnClickListener() {
+        input_name=findViewById(R.id.input_name);
+        input_address=findViewById(R.id.input_address);
+        input_phone=findViewById(R.id.input_phone);
+        input_email=findViewById(R.id.input_email);
+        ic_save = findViewById(R.id.ic_save);
+        ic_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddressActivity.this, OrderDetailActivity.class);
-                startActivity(intent);
+                Intent myintent = new Intent(AddressActivity.this, OrderDetailActivity.class);
+                // lấy dữ liệu
+                String name=input_name.getText().toString();
+                String address=input_address.getText().toString();
+                String phone=input_phone.getText().toString();
+                String email=input_email.getText().toString();
+                //đóng gói dữ liệu vào bundle
+                Bundle mybundle=new Bundle();
+                // đưa dữ liệu vào bundle
+                mybundle.putString("name",name);
+                mybundle.putString("address",address);
+                mybundle.putString("phone",phone);
+                mybundle.putString("email",email);
+                // dua bundle vao intent
+                myintent.putExtra("mypackage", mybundle);
+                startActivity(myintent);
             }
         });
+
+
+
+
 
 
     }
